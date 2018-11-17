@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,87 +22,120 @@
     <!-- Custom styles for this template -->
     <link href="{% static 'css/resume.min.css' %}" rel="stylesheet">
 
-  </head>
+</head>
 
-  <body id="page-top">
+<body id="page-top">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Clarence Taylor</span>
         <span class="d-none d-lg-block">
           <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'img/avatar.jpg' %}" alt="">
         </span>
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">Materias</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#experience">Tareas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#education">Calificaciones</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#skills">Recursos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#interests">Perfil</a>
-          </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#about">Materias</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#experience">Tareas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#education">Calificaciones</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#skills">Recursos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#interests">Perfil</a>
+            </li>
         </ul>
-      </div>
-    </nav>
+    </div>
+</nav>
 
-    <div class="container-fluid p-0">
-      <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+<div class="container-fluid p-0">
+    <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
         <div class="my-auto">
-          <h1 class="mb-0">Test
-            <span class="text-primary">Test</span>
-          </h1>
-          <div class="subheading mb-5">Papu
-            <a href="mailto:name@email.com">Papu</a>
-          </div>
-          <p class="lead mb-5">bla bla bla bla bla</p>
-{#          <div class="social-icons">#}
-{#            <a href="#">#}
-{#              <i class="fab fa-linkedin-in"></i>#}
-{#            </a>#}
-{#            <a href="#">#}
-{#              <i class="fab fa-github"></i>#}
-{#            </a>#}
-{#            <a href="#">#}
-{#              <i class="fab fa-twitter"></i>#}
-{#            </a>#}
-{#            <a href="#">#}
-{#              <i class="fab fa-facebook-f"></i>#}
-{#            </a>#}
-{#          </div>#}
+            <h1 class="mb-0">Test
+                <span class="text-primary">Test</span>
+            </h1>
+            <div class="subheading mb-5">Papu
+                <a href="mailto:name@email.com">Papu</a>
+            </div>
+            <p class="lead mb-5">bla bla bla bla bla</p>
+            {#          <div class="social-icons">#}
+            {#            <a href="#">#}
+            {#              <i class="fab fa-linkedin-in"></i>#}
+            {#            </a>#}
+            {#            <a href="#">#}
+            {#              <i class="fab fa-github"></i>#}
+            {#            </a>#}
+            {#            <a href="#">#}
+            {#              <i class="fab fa-twitter"></i>#}
+            {#            </a>#}
+            {#            <a href="#">#}
+            {#              <i class="fab fa-facebook-f"></i>#}
+            {#            </a>#}
+            {#          </div>#}
         </div>
-      </section>
+    </section>
 
-      <hr class="m-0">
+    <hr class="m-0">
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
         <div class="my-auto">
-          <h2 class="mb-5">Tareas</h2>
+            <h2 class="mb-5">Tareas</h2>
 
+            {% for tarea in tareas %}
+                <div class="resume-item d-flex flex-column flex-md-row mb-5" id="tareaItem">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">{{ tarea.materia.nombre }}</h3>
+                        <div class="subheading mb-3">{{ tarea.titulo }}</div>
+                        <p>{{ tarea.descripcion }}.</p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">Publicada: {{ tarea.fechaInicio }}</span> <br>
+                        {% if tarea.estatus == 1 %}
+                            <span>Estatus: <i style="color: dodgerblue">Pendiente</i></span>
+                        {% endif %}
+                        <br>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                            Agregar envio
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                             aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Agregar archivos</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                        {{ forloop.counter0 }}
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar
+                                        </button>
+                                        <button type="button" class="btn btn-primary">Entregar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
 
-          <div class="resume-item d-flex flex-column flex-md-row mb-5" id="tareaItem">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Ingenieria de software (TEST)</h3>
-              <div class="subheading mb-3">Diseño estructurado</div>
-              <p>Bla bla bla bla bla.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Marzo 2018 - <i style="color: dodgerblue">Pendiente</i></span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            {% comment %}<div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
               <h3 class="mb-0">Estructura de datos</h3>
               <div class="subheading mb-3">Archivos</div>
@@ -122,109 +155,109 @@
             <div class="resume-date text-md-right">
               <span class="text-primary">Noviembre 2018 - <i style="color: green">Entregado</i></span>
             </div>
-          </div>
+          </div>{% endcomment %}
 
         </div>
 
-      </section>
+    </section>
 
-      <hr class="m-0">
+    <hr class="m-0">
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
         <div class="my-auto">
-          <h2 class="mb-5">Calificaciones</h2>
+            <h2 class="mb-5">Calificaciones</h2>
 
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Proyecto IS</h3>
-              <div class="subheading mb-3">Avance 1</div>
-              <div>Bla bla</div>
-              <p>95/100</p>
+            <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                <div class="resume-content mr-auto">
+                    <h3 class="mb-0">Proyecto IS</h3>
+                    <div class="subheading mb-3">Avance 1</div>
+                    <div>Bla bla</div>
+                    <p>95/100</p>
+                </div>
+                <div class="resume-date text-md-right">
+                    <span class="text-primary">Octubre 2018 - <i style="color: green">Aprobado</i></span>
+                </div>
             </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Octubre 2018 - <i style="color: green">Aprobado</i></span>
-            </div>
-          </div>
         </div>
-      </section>
+    </section>
 
-      <hr class="m-0">
+    <hr class="m-0">
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
         <div class="my-auto">
-          <h2 class="mb-5">Recursos</h2>
+            <h2 class="mb-5">Recursos</h2>
 
-          <div class="subheading mb-3">Leer acerca de lenguajes &amp; herramientas</div>
-          <ul class="list-inline dev-icons">
-            <li class="list-inline-item">
-              <i class="fab fa-html5"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-css3-alt"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-js-square"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-angular"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-react"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-node-js"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-sass"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-less"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-wordpress"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-gulp"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-grunt"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="fab fa-npm"></i>
-            </li>
-          </ul>
+            <div class="subheading mb-3">Leer acerca de lenguajes &amp; herramientas</div>
+            <ul class="list-inline dev-icons">
+                <li class="list-inline-item">
+                    <i class="fab fa-html5"></i>
+                </li>
+                <li class="list-inline-item">
+                    <i class="fab fa-css3-alt"></i>
+                </li>
+                <li class="list-inline-item">
+                    <i class="fab fa-js-square"></i>
+                </li>
+                <li class="list-inline-item">
+                    <i class="fab fa-angular"></i>
+                </li>
+                <li class="list-inline-item">
+                    <i class="fab fa-react"></i>
+                </li>
+                <li class="list-inline-item">
+                    <i class="fab fa-node-js"></i>
+                </li>
+                <li class="list-inline-item">
+                    <i class="fab fa-sass"></i>
+                </li>
+                <li class="list-inline-item">
+                    <i class="fab fa-less"></i>
+                </li>
+                <li class="list-inline-item">
+                    <i class="fab fa-wordpress"></i>
+                </li>
+                <li class="list-inline-item">
+                    <i class="fab fa-gulp"></i>
+                </li>
+                <li class="list-inline-item">
+                    <i class="fab fa-grunt"></i>
+                </li>
+                <li class="list-inline-item">
+                    <i class="fab fa-npm"></i>
+                </li>
+            </ul>
         </div>
-      </section>
+    </section>
 
-      <hr class="m-0">
+    <hr class="m-0">
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
         <div class="my-auto">
-          <h2 class="mb-5">Perfil</h2>
+            <h2 class="mb-5">Perfil</h2>
         </div>
-      </section>
+    </section>
 
-      <hr class="m-0">
+    <hr class="m-0">
 
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
         <div class="my-auto">
-          <h2 class="mb-5">En desarrollo...</h2>
+            <h2 class="mb-5">En desarrollo...</h2>
 
         </div>
-      </section>
+    </section>
 
-    </div>
+</div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
-    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<!-- Bootstrap core JavaScript -->
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+<!-- Plugin JavaScript -->
+<script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
 
-    <!-- Custom scripts for this template -->
-    <script src="{% static 'js/resume.min.js' %}"></script>
+<!-- Custom scripts for this template -->
+<script src="{% static 'js/resume.min.js' %}"></script>
 
-  </body>
+</body>
 
 </html>
