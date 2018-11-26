@@ -84,11 +84,13 @@
                     <div class="resume-date text-md-right">
                         <span class="text-primary">Fecha limite: {{ tarea.fechaFin }}</span> <br>
                         {% for at in alumnoTareas %}
-                            {% if at.tareaCurso.pk == tarea.curso.pk %}
+                            {% if at.tareaCurso.curso.pk == tarea.curso.pk and at.tareaCurso.pk == tarea.pk %}
                                 {% if at.estatus == 1 %}
                                     <span>Estatus: <i style="color: dodgerblue">Pendiente</i></span>
                                 {% elif at.estatus == 2 %}
                                     <span>Estatus: <i style="color: green; font-weight: bold">Entregado</i></span>
+                                {% elif at.estatus == 3 %}
+                                    <span>Estatus: <i style="color: red; font-weight: bold">Atrasado</i></span>
                                 {% endif %}
                             {% endif %}
                         {% endfor %}
