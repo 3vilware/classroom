@@ -184,6 +184,10 @@ section.resume-section .resume-item .resume-date {
   background-color: #BD5D38 !important;
 }
 
+.bg-primary-teacher {
+  background-color: steelblue !important;
+}
+
 .text-primary {
   color: #BD5D38 !important;
 }

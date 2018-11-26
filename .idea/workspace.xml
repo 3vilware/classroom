@@ -2,9 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ae6f161-a736-4a57-bb59-b8621ff1ea65" name="Default Changelist" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Classroom/forms.py" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/portalAlumno/studentCourse.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/portalMaestros/createTarea.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/portalMaestros/edit.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/portalMaestros/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/templates/portalMaestros/teacherCourse.html" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5868448c-ba00-4b96-8787-c962e98089e9.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/5868448c-ba00-4b96-8787-c962e98089e9.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Classroom/migrations/0002_auto_20181116_2315.py" afterPath="" />
       <change beforePath="$PROJECT_DIR$/Classroom/models.py" afterPath="$PROJECT_DIR$/Classroom/models.py" />
       <change beforePath="$PROJECT_DIR$/Classroom/views.py" afterPath="$PROJECT_DIR$/Classroom/views.py" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/isProyect/urls.py" afterPath="$PROJECT_DIR$/isProyect/urls.py" />
+      <change beforePath="$PROJECT_DIR$/main.png" afterPath="$PROJECT_DIR$/main.png" />
+      <change beforePath="$PROJECT_DIR$/static/css/resume.css" afterPath="$PROJECT_DIR$/static/css/resume.css" />
       <change beforePath="$PROJECT_DIR$/templates/portalAlumno/index.html" afterPath="$PROJECT_DIR$/templates/portalAlumno/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,6 +56,28 @@
   </component>
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/Classroom/models.py">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="466">
+                    <caret line="59" column="33" lean-forward="true" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="33" />
+                    <folding>
+                      <element signature="e#24#63#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1911540766">
@@ -87,8 +121,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/isProyect/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-154">
-              <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+            <state relative-caret-position="198">
+              <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -97,8 +131,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/isProyect/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="22" column="45" lean-forward="false" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+            <state relative-caret-position="404">
+              <caret line="31" column="49" lean-forward="false" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
               <folding>
                 <element signature="e#643#675#0" expanded="true" />
               </folding>
@@ -106,11 +140,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Classroom/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" column="83" lean-forward="false" selection-start-line="9" selection-start-column="83" selection-end-line="9" selection-end-column="83" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Classroom/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="19" column="48" lean-forward="false" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+            <state relative-caret-position="382">
+              <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
               </folding>
@@ -118,14 +164,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classroom/models.py">
+      <file leaf-file-name="teacherCourse.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/portalMaestros/teacherCourse.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="72" column="34" lean-forward="false" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
+            <state relative-caret-position="1672">
+              <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
               <folding>
-                <element signature="e#24#63#0" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#iframe#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#iframe#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createTarea.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/portalMaestros/createTarea.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="35" column="59" lean-forward="false" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -133,12 +191,12 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/portalAlumno/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="123" column="59" lean-forward="false" selection-start-line="123" selection-start-column="59" selection-end-line="123" selection-end-column="59" />
+            <state relative-caret-position="242">
+              <caret line="67" column="16" lean-forward="true" selection-start-line="67" selection-start-column="16" selection-end-line="69" selection-end-column="22" />
               <folding>
-                <element signature="n#style#0;n#i#0;n#span#1;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#5402#5409#1#HTML" expanded="true" />
-                <marker date="1542435166460" expanded="false" signature="7166:7178" ph="..." />
+                <marker date="1543198354236" expanded="false" signature="4439:4456" ph="..." />
+                <marker date="1543198354236" expanded="false" signature="5500:5507" ph="×" />
+                <marker date="1543198354236" expanded="false" signature="7280:7292" ph="..." />
               </folding>
             </state>
           </provider>
@@ -147,8 +205,8 @@
       <file leaf-file-name="resume.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/resume.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="10" />
+            <state relative-caret-position="51">
+              <caret line="176" column="26" lean-forward="true" selection-start-line="176" selection-start-column="26" selection-end-line="176" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -160,6 +218,8 @@
     <findStrings>
       <find>bug</find>
       <find>tarea</find>
+      <find>bg</find>
+      <find>publi</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -171,10 +231,16 @@
         <option value="$PROJECT_DIR$/isProyect/settings.py" />
         <option value="$PROJECT_DIR$/Classroom/admin.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/isProyect/urls.py" />
-        <option value="$PROJECT_DIR$/static/css/resume.css" />
-        <option value="$PROJECT_DIR$/templates/portalAlumno/index.html" />
         <option value="$PROJECT_DIR$/Classroom/models.py" />
+        <option value="$PROJECT_DIR$/templates/portalAlumno/index.html" />
+        <option value="$PROJECT_DIR$/static/css/resume.css" />
+        <option value="$PROJECT_DIR$/templates/portalAlumno/studentCourse.html" />
+        <option value="$PROJECT_DIR$/templates/portalMaestros/index.html" />
+        <option value="$PROJECT_DIR$/templates/portalMaestros/edit.html" />
+        <option value="$PROJECT_DIR$/isProyect/urls.py" />
+        <option value="$PROJECT_DIR$/templates/portalMaestros/createTarea.html" />
+        <option value="$PROJECT_DIR$/templates/portalMaestros/teacherCourse.html" />
+        <option value="$PROJECT_DIR$/Classroom/forms.py" />
         <option value="$PROJECT_DIR$/Classroom/views.py" />
       </list>
     </option>
@@ -191,11 +257,10 @@
       <path value="$PROJECT_DIR$/static/vendor/fontawesome-free/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="140" />
-    <option name="y" value="23" />
-    <option name="width" value="1300" />
-    <option name="height" value="825" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="124" />
+    <option name="width" value="1445" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -226,12 +291,6 @@
               <item name="isProyect" type="b2602c69:ProjectViewProjectNode" />
               <item name="isProyect" type="462c0819:PsiDirectoryNode" />
               <item name="Classroom" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="isProyect" type="b2602c69:ProjectViewProjectNode" />
-              <item name="isProyect" type="462c0819:PsiDirectoryNode" />
-              <item name="Classroom" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="isProyect" type="b2602c69:ProjectViewProjectNode" />
@@ -267,6 +326,12 @@
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="portalAlumno" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="isProyect" type="b2602c69:ProjectViewProjectNode" />
+              <item name="isProyect" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="portalMaestros" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -282,6 +347,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ricar\Documents\Universidad\7to\Sem IS\isProyect\templates\portalMaestros" />
       <recent name="C:\Users\ricar\Documents\Universidad\7to\Sem IS\isProyect\templates\portalAlumno" />
     </key>
   </component>
@@ -305,7 +371,7 @@
         <env name="DJANGO_SETTINGS_MODULE" value="isProyect.settings" />
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Python27\python.exe" />
+      <option name="SDK_HOME" value="C:\Users\ricar\Documents\Universidad\ProyectoABD\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -339,28 +405,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <frame x="124" y="0" width="1445" height="1038" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3589138" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14017186" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26403823" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293979" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27001196" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19649379" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24981739" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -383,11 +449,126 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/isProyect/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" column="45" lean-forward="false" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+          <folding>
+            <element signature="e#643#675#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classroom/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1540">
+          <caret line="72" column="34" lean-forward="false" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classroom/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="19" column="48" lean-forward="false" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/portalAlumno/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2706">
+          <caret line="123" column="59" lean-forward="false" selection-start-line="123" selection-start-column="59" selection-end-line="123" selection-end-column="59" />
+          <folding>
+            <marker date="1543198354236" expanded="false" signature="4439:4456" ph="..." />
+            <marker date="1543198354236" expanded="false" signature="5500:5507" ph="×" />
+            <marker date="1543198354236" expanded="false" signature="7280:7292" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/resume.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/isProyect/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/isProyect/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" column="45" lean-forward="false" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+          <folding>
+            <element signature="e#643#675#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classroom/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1540">
+          <caret line="72" column="34" lean-forward="false" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/portalAlumno/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2706">
+          <caret line="123" column="59" lean-forward="false" selection-start-line="123" selection-start-column="59" selection-end-line="123" selection-end-column="59" />
+          <folding>
+            <marker date="1543198354236" expanded="false" signature="4439:4456" ph="..." />
+            <marker date="1543198354236" expanded="false" signature="5500:5507" ph="×" />
+            <marker date="1543198354236" expanded="false" signature="7280:7292" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/resume.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classroom/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="19" column="48" lean-forward="false" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/isProyect/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4356">
           <caret line="198" column="0" lean-forward="false" selection-start-line="198" selection-start-column="0" selection-end-line="198" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -425,9 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
           <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding>
-            <element signature="e#24#37#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -435,9 +613,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="16" column="26" lean-forward="false" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding>
-            <element signature="e#24#37#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -445,44 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/5868448c-ba00-4b96-8787-c962e98089e9.SCHEMA:main">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>5868448c-ba00-4b96-8787-c962e98089e9.SCHEMA:main</OriginalElement>
-          <nodes>
-            <node x="" y="">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_materiaalumno</node>
-            <node x="" y="">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_group</node>
-            <node x="" y="">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.sqlite_sequence</node>
-            <node x="" y="">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.django_migrations</node>
-            <node x="" y="">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_usuario</node>
-            <node x="" y="">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.django_session</node>
-            <node x="" y="">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_materiaciclo</node>
-            <node x="" y="">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_tarea</node>
-            <node x="" y="">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.django_content_type</node>
-            <node x="" y="">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.django_admin_log</node>
-            <node x="" y="">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_maestro</node>
-            <node x="" y="">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_user_user_permissions</node>
-            <node x="" y="">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_alumno</node>
-            <node x="" y="">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_materia</node>
-            <node x="" y="">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_user_groups</node>
-            <node x="" y="">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_group_permissions</node>
-            <node x="" y="">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_user</node>
-            <node x="" y="">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_permission</node>
-            <node x="" y="">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.sqlite_master</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.31959416613823716" x="821.0" y="778.5" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
         </state>
       </provider>
     </entry>
@@ -497,7 +634,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-9338">
           <caret line="420" column="11" lean-forward="false" selection-start-line="419" selection-start-column="4" selection-end-line="682" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -505,64 +641,281 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/5868448c-ba00-4b96-8787-c962e98089e9.SCHEMA:main">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>5868448c-ba00-4b96-8787-c962e98089e9.SCHEMA:main</OriginalElement>
+          <nodes>
+            <node x="1215.0166666666667" y="1262.5">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_tareacurso</node>
+            <node x="267.0" y="1796.0">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.sqlite_sequence</node>
+            <node x="1646.0166666666667" y="0.0">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.django_migrations</node>
+            <node x="1118.5166666666667" y="451.5">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_usuario</node>
+            <node x="0.0" y="1796.0">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.django_session</node>
+            <node x="1150.7666666666667" y="1525.0">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_tareaalumno</node>
+            <node x="444.0" y="384.0">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.django_admin_log</node>
+            <node x="1123.5166666666667" y="919.0">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_curso</node>
+            <node x="319.19404761904764" y="108.0">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.django_content_type</node>
+            <node x="0.0" y="465.0">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_group</node>
+            <node x="929.7666666666667" y="1565.5">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_cursoalumno</node>
+            <node x="1125.5166666666667" y="697.0">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_maestro</node>
+            <node x="748.1940476190476" y="724.0">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_user_user_permissions</node>
+            <node x="884.6940476190476" y="1249.0">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_alumno</node>
+            <node x="553.1940476190476" y="724.0">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_user_groups</node>
+            <node x="69.44404761904764" y="724.0">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_group_permissions</node>
+            <node x="827.9690476190476" y="0.0">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_user</node>
+            <node x="200.0" y="438.0">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_permission</node>
+            <node x="1445.0166666666667" y="0.0">5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.sqlite_master</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.django_admin_log" target="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.django_content_type">
+              <point x="-64.75" y="-126.5" />
+              <point x="508.75" y="364.0" />
+              <point x="479.69404761904764" y="364.0" />
+              <point x="53.5" y="59.0" />
+            </edge>
+            <edge source="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_user_groups" target="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_user">
+              <point x="43.75" y="-59.0" />
+              <point x="684.4440476190476" y="677.0" />
+              <point x="713.5" y="677.0" />
+              <point x="713.5" y="364.0" />
+              <point x="893.3690476190476" y="364.0" />
+              <point x="-43.60000000000002" y="167.0" />
+            </edge>
+            <edge source="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_cursoalumno" target="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_curso">
+              <point x="50.25" y="-72.5" />
+              <point x="1080.5166666666667" y="1505.0" />
+              <point x="1083.1940476190475" y="1505.0" />
+              <point x="1083.1940476190475" y="1224.0" />
+              <point x="1171.5166666666667" y="1224.0" />
+              <point x="-48.0" y="140.0" />
+            </edge>
+            <edge source="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_alumno" target="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_user">
+              <point x="0.0" y="-113.0" />
+              <point x="978.6940476190476" y="364.0" />
+              <point x="980.5690476190475" y="364.0" />
+              <point x="43.59999999999991" y="167.0" />
+            </edge>
+            <edge source="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_tareacurso" target="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_curso">
+              <point x="0.0" y="-99.5" />
+              <point x="1307.5166666666667" y="1224.0" />
+              <point x="1267.5166666666667" y="1224.0" />
+              <point x="48.0" y="140.0" />
+            </edge>
+            <edge source="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_permission" target="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.django_content_type">
+              <point x="0.0" y="-72.5" />
+              <point x="312.0" y="364.0" />
+              <point x="372.69404761904764" y="364.0" />
+              <point x="-53.5" y="59.0" />
+            </edge>
+            <edge source="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_usuario" target="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_user">
+              <point x="0.0" y="-59.0" />
+              <point x="1219.5166666666667" y="364.0" />
+              <point x="1024.1690476190474" y="364.0" />
+              <point x="87.19999999999993" y="167.0" />
+            </edge>
+            <edge source="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_curso" target="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_maestro">
+              <point x="0.0" y="-140.0" />
+              <point x="0.0" y="86.0" />
+            </edge>
+            <edge source="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_user_groups" target="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_group">
+              <point x="-43.75" y="-59.0" />
+              <point x="596.9440476190476" y="667.0" />
+              <point x="135.0" y="667.0" />
+              <point x="45.0" y="45.5" />
+            </edge>
+            <edge source="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_user_user_permissions" target="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_user">
+              <point x="55.0" y="-59.0" />
+              <point x="913.1940476190476" y="677.0" />
+              <point x="936.9690476190476" y="677.0" />
+              <point x="0.0" y="167.0" />
+            </edge>
+            <edge source="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_tareaalumno" target="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_alumno">
+              <point x="-52.25" y="-113.0" />
+              <point x="1203.0166666666667" y="1495.0" />
+              <point x="1025.6940476190475" y="1495.0" />
+              <point x="47.0" y="113.0" />
+            </edge>
+            <edge source="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.django_admin_log" target="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_user">
+              <point x="64.75" y="-126.5" />
+              <point x="638.25" y="354.0" />
+              <point x="849.7690476190476" y="354.0" />
+              <point x="-87.20000000000005" y="167.0" />
+            </edge>
+            <edge source="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_user_user_permissions" target="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_permission">
+              <point x="-55.0" y="-59.0" />
+              <point x="803.1940476190476" y="657.0" />
+              <point x="368.0" y="657.0" />
+              <point x="56.0" y="72.5" />
+            </edge>
+            <edge source="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_cursoalumno" target="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_alumno">
+              <point x="-50.25" y="-72.5" />
+              <point x="980.0166666666667" y="1505.0" />
+              <point x="931.6940476190476" y="1505.0" />
+              <point x="-47.0" y="113.0" />
+            </edge>
+            <edge source="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_group_permissions" target="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_group">
+              <point x="-52.5" y="-59.0" />
+              <point x="121.94404761904764" y="677.0" />
+              <point x="45.0" y="677.0" />
+              <point x="-45.0" y="45.5" />
+            </edge>
+            <edge source="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_group_permissions" target="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.auth_permission">
+              <point x="52.5" y="-59.0" />
+              <point x="226.94404761904764" y="677.0" />
+              <point x="256.0" y="677.0" />
+              <point x="-56.0" y="72.5" />
+            </edge>
+            <edge source="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_tareaalumno" target="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_tareacurso">
+              <point x="52.25" y="-113.0" />
+              <point x="0.0" y="99.5" />
+            </edge>
+            <edge source="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_maestro" target="5868448c-ba00-4b96-8787-c962e98089e9.TABLE:main.Classroom_usuario">
+              <point x="0.0" y="-86.0" />
+              <point x="0.0" y="59.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.31959416613823716" x="40.95238095238096" y="540.952380952381" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/resume.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/resume.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="10" />
+        <state relative-caret-position="51">
+          <caret line="176" column="26" lean-forward="true" selection-start-line="176" selection-start-column="26" selection-end-line="176" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/isProyect/settings.py">
+    <entry file="file://$PROJECT_DIR$/templates/portalAlumno/studentCourse.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-154">
-          <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/isProyect/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="22" column="45" lean-forward="false" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
+        <state relative-caret-position="359">
+          <caret line="84" column="63" lean-forward="false" selection-start-line="84" selection-start-column="63" selection-end-line="84" selection-end-column="63" />
           <folding>
-            <element signature="e#643#675#0" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#span#1;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#i#0;n#span#2;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#5078#5085#1#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/portalAlumno/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="123" column="59" lean-forward="false" selection-start-line="123" selection-start-column="59" selection-end-line="123" selection-end-column="59" />
+        <state relative-caret-position="242">
+          <caret line="67" column="16" lean-forward="true" selection-start-line="67" selection-start-column="16" selection-end-line="69" selection-end-column="22" />
           <folding>
-            <element signature="n#style#0;n#i#0;n#span#1;n#div#1;n#div#0;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#5402#5409#1#HTML" expanded="true" />
-            <marker date="1542435166460" expanded="false" signature="7166:7178" ph="..." />
+            <marker date="1543198354236" expanded="false" signature="4439:4456" ph="..." />
+            <marker date="1543198354236" expanded="false" signature="5500:5507" ph="×" />
+            <marker date="1543198354236" expanded="false" signature="7280:7292" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/portalMaestros/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="59" column="46" lean-forward="false" selection-start-line="59" selection-start-column="46" selection-end-line="59" selection-end-column="62" />
+          <folding>
+            <element signature="n#style#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#i#0;n#a#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#4784#4791#1#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/isProyect/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="31" column="49" lean-forward="false" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
+          <folding>
+            <element signature="e#643#675#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/isProyect/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="25" column="21" lean-forward="false" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/portalMaestros/createTarea.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="35" column="59" lean-forward="false" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Classroom/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="72" column="34" lean-forward="false" selection-start-line="72" selection-start-column="34" selection-end-line="72" selection-end-column="34" />
+        <state relative-caret-position="466">
+          <caret line="59" column="33" lean-forward="true" selection-start-line="59" selection-start-column="33" selection-end-line="59" selection-end-column="33" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classroom/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="83" lean-forward="false" selection-start-line="9" selection-start-column="83" selection-end-line="9" selection-end-column="83" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Classroom/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="19" column="48" lean-forward="false" selection-start-line="19" selection-start-column="48" selection-end-line="19" selection-end-column="48" />
+        <state relative-caret-position="382">
+          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/portalMaestros/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="31" column="10" lean-forward="false" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/portalMaestros/teacherCourse.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1672">
+          <caret line="149" column="0" lean-forward="false" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#iframe#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#iframe#0;n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#section#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

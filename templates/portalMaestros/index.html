@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Portal Alumno</title>
+    <title>Portal Maestro</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -26,11 +26,12 @@
 
 <body id="page-top">
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: steelblue" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <i style="font-size: x-large; color: darkorange; font-weight: bold">Bienvenido Profesor</i>
         <span class="d-block d-lg-none">Clarence Taylor</span>
         <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'img/avatar.jpg' %}" alt="">
+{#          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'img/avatar.jpg' %}" alt="">#}
         </span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -40,19 +41,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#about">Materias</a>
+                <a class="nav-link js-scroll-trigger" href="#about">Cursos</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#experience">Tareas</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#education">Calificaciones</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#skills">Recursos</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#interests">Perfil</a>
+                <a class="nav-link js-scroll-trigger" href="#education">Entregas</a>
             </li>
         </ul>
     </div>
@@ -61,53 +56,39 @@
 <div class="container-fluid p-0">
     <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
         <div class="my-auto">
-            <h1 class="mb-0">Revisando:
-                <span class="text-primary">actual </span>
+            <h1 class="mb-0">Tus cursos
+                <span class="text-primary"> - Sin seleccionado</span>
             </h1>
             {% for curso in cursos %}
-                <div class="col-md-6 justify-content-center">
-                    {{ curso.curso.nombre }} - <a href="{% url 'studentCourse' curso.pk %}">Ver tareas</a>
+                <div class="col-md-12 justify-content-center" style="border: solid cornflowerblue">
+                    <span style="font-size: x-large;">{{ curso.nombre }} - <a href="{% url 'teacherCourse' curso.pk %}">Ver contenido</a></span>
                 </div>
             {% endfor %}
-            {#          <div class="social-icons">#}
-            {#            <a href="#">#}
-            {#              <i class="fab fa-linkedin-in"></i>#}
-            {#            </a>#}
-            {#            <a href="#">#}
-            {#              <i class="fab fa-github"></i>#}
-            {#            </a>#}
-            {#            <a href="#">#}
-            {#              <i class="fab fa-twitter"></i>#}
-            {#            </a>#}
-            {#            <a href="#">#}
-            {#              <i class="fab fa-facebook-f"></i>#}
-            {#            </a>#}
-            {#          </div>#}
         </div>
     </section>
 
     <hr class="m-0">
 
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
-        <div class="my-auto">
-            <h2 class="mb-5">Tareas</h2>
-
-            {% comment %}{% for tarea in tareas %}
-                <div class="resume-item d-flex flex-column flex-md-row mb-5" id="tareaItem">
+        <div class="my-auto row">
+            <div class="col-md-12" style="display: inline">
+                <h2 class="mb-5">Tareas
+                    <button class="btn btn-warning mb-10">Agregar tarea</button>
+                </h2>
+            </div>
+            {% for tarea in tareas %}
+                <div class="resume-item d-flex flex-column flex-md-row mb-5 col-md-4"
+                     style="border: solid burlywood" id="tareaItem">
                     <div class="resume-content mr-auto">
-                        <h3 class="mb-0">{{ tarea.materia.nombre }}</h3>
-                        <div class="subheading mb-3">{{ tarea.titulo }}</div>
+                        <h3 class="mb-0">{{ tarea.titulo }}</h3>
+                        <div class="subheading mb-3">Publicada: {{ tarea.fechaInicio }}</div>
                         <p>{{ tarea.descripcion }}.</p>
                     </div>
-                    <div class="resume-date text-md-right">
-                        <span class="text-primary">Publicada: {{ tarea.fechaInicio }}</span> <br>
-                        {% if tarea.estatus == 1 %}
-                            <span>Estatus: <i style="color: dodgerblue">Pendiente</i></span>
-                        {% endif %}
-                        <br>
+                    <div>
+                        <span class="text-primary">Limite: {{ tarea.fechaFin }}</span> <br>
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-                            Agregar envio
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">
+                            Editar
                         </button>
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
@@ -115,49 +96,28 @@
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Agregar archivos</h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">Formulario</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <div class="modal-body">
-                                        ...
-                                        {{ forloop.counter0 }}
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar
-                                        </button>
-                                        <button type="button" class="btn btn-primary">Entregar</button>
-                                    </div>
+                                   <form action="{% url 'teacherEditTask' tarea.pk %}" method="post">
+                                        {% csrf_token %}
+                                        <div class="modal-body">
+                                                {{ form.as_p }}
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar
+                                            </button>
+                                            <button type="submit" class="btn btn-primary">Actualizar</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            {% endfor %}{% endcomment %}
-
-            {% comment %}<div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Estructura de datos</h3>
-              <div class="subheading mb-3">Archivos</div>
-              <p>Bla bla bla bla bla</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Noviembre 2018 - Atrasada</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Estructura de datos</h3>
-              <div class="subheading mb-3">Archivos</div>
-              <p>Bla bla bla bla bla</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Noviembre 2018 - <i style="color: green">Entregado</i></span>
-            </div>
-          </div>{% endcomment %}
-
+            {% endfor %}
         </div>
 
     </section>
@@ -167,7 +127,6 @@
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
         <div class="my-auto">
             <h2 class="mb-5">Calificaciones</h2>
-
             <div class="resume-item d-flex flex-column flex-md-row mb-5">
                 <div class="resume-content mr-auto">
                     <h3 class="mb-0">Proyecto IS</h3>

@@ -16,10 +16,19 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from Classroom import views
+from django.views.generic import TemplateView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^init/', views.init, name="init"),
     url(r'^studentPortal/', views.studentInit, name="init"),
+    url(r'^studentCourse/(?P<cursoid>.+?)', views.studentCourse, name="studentCourse"),
+
+    #Teacher
+    url(r'^teacherInit/', views.teacherInit, name="teacherInit"),
+    url(r'^teacherCourse/(?P<cursoid>.+?)', views.teacherCourse, name="teacherCourse"),
+    url(r'^teacherEditTask/(?P<pk>.+?)/', views.updateTarea.as_view(), name="teacherEditTask"),
+    url(r'^teacherDeleteTask/(?P<pk>.+?)/(?P<cursoid>.+?)', views.deleteTarea, name="teacherDeleteTask"),
+    url(r'^createTeacherTask/', views.createTarea, name="createTeacherTask"),
 
 ]
