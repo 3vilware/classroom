@@ -34,9 +34,9 @@ class Alumno(models.Model):
         return self.usuario.username
 
 class Curso(models.Model):
-    nombre = models.TextField()
+    nombre = models.CharField(max_length=70)
     horas = models.IntegerField()  # horas al semestre
-    departamento = models.TextField()
+    #departamento = models.TextField()
     maestro = models.ForeignKey(Maestro)
     hora = models.TimeField()
     aula = models.CharField(max_length=10)

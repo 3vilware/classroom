@@ -81,6 +81,13 @@ def createTarea(request):
         formTarea = TareaForm(data=request.POST)
         if formTarea.is_valid():
             formTarea.save()
+            print formTarea.cleaned_data["curso"]
+            curso = Curso.objects.get(pk=formTarea.cleaned_data["curso"].pk)
+            newTareaCurso = TareaCurso.objects.last()
+            tareaParaAlumnos = CursoAlumno.objects.filter(curso=curso)
+            for ta in tareaParaAlumnos:
+                new = TareaAlumno(alumno=ta.alumno, tareaCurso=newTareaCurso, estatus=1)
+                new.save()
             return teacherInit(request)
     else:
         formTarea = TareaForm()
@@ -88,6 +95,21 @@ def createTarea(request):
         cursos = CursoAlumno.objects.filter(alumno=student.pk)
 
         context = {"cursos": cursos, "form": formTarea}
+        return render(request,'portalMaestros/createTarea.html', context)
+
+
+def createCurso(request):
+    if request.method == 'POST':
+        formCurso = CursoForm(data=request.POST)
+        if formCurso.is_valid():
+            formCurso.save()
+            return teacherInit(request)
+    else:
+        formCurso = CursoForm()
+        student = Alumno.objects.first()
+        cursos = CursoAlumno.objects.filter(alumno=student.pk)
+
+        context = {"cursos": cursos, "form": formCurso}
         return render(request,'portalMaestros/createTarea.html', context)
 
 

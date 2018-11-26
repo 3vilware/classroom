@@ -30,5 +30,6 @@ urlpatterns = [
     url(r'^teacherEditTask/(?P<pk>.+?)/', views.updateTarea.as_view(), name="teacherEditTask"),
     url(r'^teacherDeleteTask/(?P<pk>.+?)/(?P<cursoid>.+?)', views.deleteTarea, name="teacherDeleteTask"),
     url(r'^createTeacherTask/', views.createTarea, name="createTeacherTask"),
+    url(r'^createTeacherCourse/', views.createCurso, name="createTeacherCourse"),
 
 ]

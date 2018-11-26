@@ -10,3 +10,11 @@ class TareaForm(forms.ModelForm):
             'fechaFin': forms.DateInput(attrs={'class': 'form-control','type':'date'}),
         }
 
+
+class CursoForm(forms.ModelForm):
+    class Meta():
+        model = Curso
+        fields = '__all__'
+
+        widgets = {
+        }
