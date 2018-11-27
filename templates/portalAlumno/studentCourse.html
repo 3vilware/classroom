@@ -58,6 +58,7 @@
             <h1 class="mb-0">Revisando:
                 <span class="text-primary">{{ nombre }} </span>
             </h1>
+        <button class="btn btn-success" onclick="addCourse()">INSCRIBIRME A UN CURSO</button>
             {% for curso in cursos %}
                 <div class="col-md-6 justify-content-center">
                     {{ curso.curso.nombre }} - <a href="{% url 'studentCourse' curso.pk %}">Ver tareas</a>
@@ -250,5 +251,27 @@
 <script src="{% static 'js/resume.min.js' %}"></script>
 
 </body>
+
+<script>
+    function addCourse(){
+        var codigo = prompt("Código del curso: ", "");
+        if (codigo == null || codigo == ""){
+            txt = "No puedes enviar campos nulos";
+            alert(txt);
+        }
+        else{
+            var myId = 1;
+            url = "http://localhost:8000/addCourseToStudent/"+codigo+"/"+myId;
+            console.log(url);
+
+            fetch(url)
+                .then(function (response) {
+                    r = response.json();
+                    console.log(r);
+                    location.reload();
+                });
+        }
+    }
+</script>
 
 </html>

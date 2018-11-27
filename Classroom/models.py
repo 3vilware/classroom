@@ -52,7 +52,7 @@ class CursoAlumno(models.Model):
     calificacion = models.FloatField(blank=True, null=True)
 
 
-class TareaCurso(models.Model): # Tareas para un curso (materia) en especifico
+class TareaCurso(models.Model): # Tareas para un ccursourso (materia) en especifico
     curso = models.ForeignKey(Curso)
     titulo = models.CharField(max_length=40)
     descripcion = models.TextField()

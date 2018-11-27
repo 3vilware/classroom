@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^init/', views.init, name="init"),
     url(r'^studentPortal/', views.studentInit, name="init"),
     url(r'^studentCourse/(?P<cursoid>.+?)', views.studentCourse, name="studentCourse"),
+    url(r'^addCourseToStudent/(?P<codigo>.+?)/(?P<estudianteId>.+?)', views.addCourseToStudent, name="addCourseToStudent"),
 
     #Teacher
     url(r'^teacherInit/', views.teacherInit, name="teacherInit"),
@@ -31,5 +32,6 @@ urlpatterns = [
     url(r'^teacherDeleteTask/(?P<pk>.+?)/(?P<cursoid>.+?)', views.deleteTarea, name="teacherDeleteTask"),
     url(r'^createTeacherTask/', views.createTarea, name="createTeacherTask"),
     url(r'^createTeacherCourse/', views.createCurso, name="createTeacherCourse"),
+    url(r'^successResponse/', views.successResponse, name="successResponse"),
 
 ]

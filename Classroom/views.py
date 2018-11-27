@@ -7,13 +7,18 @@ from django.views.generic.edit import UpdateView, CreateView
 from django.urls import reverse
 from django.http import HttpResponseRedirect, HttpResponse
 from forms import *
-
+from django.core.exceptions import ObjectDoesNotExist
+import json
 
 # Create your views here.
 
 
 def init(request):
     return render(request, 'index.html')
+
+def successResponse(request):
+    return render(request, 'success.html')
+
 
 def studentInit(request):
 
@@ -35,15 +40,45 @@ def studentCourse(request, cursoid):
 
     tareasAlumno = []
     for t in tareasCurso:
-        tareasAlumno = TareaAlumno.objects.filter(alumno=student.pk, tareaCurso=t.pk)
-
-    for tar in tareasAlumno:
-        print tar.tareaCurso.curso, "added a este wey"
-
+        print t.pk
+        try:
+            tareaAlumno = TareaAlumno.objects.get(alumno=student.pk, tareaCurso=t.pk)
+            tareasAlumno.append(tareaAlumno)
+            print t.pk,"Tarea", tareaAlumno.tareaCurso.curso.nombre,tareaAlumno.estatus
+        except ObjectDoesNotExist:
+            pass
 
     context = {"cursos": cursos, "tareas":tasks, "nombre":tasks[0].curso.nombre,
                "alumnoTareas":tareasAlumno}
     return render(request, 'portalAlumno/studentCourse.html', context)
+
+
+def addCourseToStudent(request,codigo,estudianteId):
+    print "Curso", codigo
+    print "Estudiante", estudianteId
+
+    try:
+        estudiante = Alumno.objects.get(pk=estudianteId)
+        curso = Curso.objects.get(codigo=codigo)
+
+        newCursoAlumno = CursoAlumno(curso=curso, alumno=estudiante)
+        newCursoAlumno.save()
+
+        tareasCurso = TareaCurso.objects.get(curso=curso.pk)
+
+        for tc in tareasCurso:
+            newTareaAlumno = TareaAlumno(alumno=estudiante.pk, tareasCurso=tc)
+            newCursoAlumno.save()
+    except ObjectDoesNotExist:
+        pass
+        print "No hay no existe"
+    except ValueError:
+        print "No hay no existe"
+        pass
+
+
+
+    return HttpResponse([json.dumps({"estatus":"ok"})], content_type="application/json")
 
 
 def teacherInit(request):
@@ -73,7 +108,9 @@ class updateTarea(UpdateView):
     #success_url = 'Success'
 
     def get_success_url(self):
-        return reverse('teacherInit')
+        return reverse('successResponse')
+
+
 
 
 def createTarea(request):
@@ -118,3 +155,4 @@ def deleteTarea(request, pk, cursoid):
     deleteable.delete()
 
     return teacherCourse(request, cursoid)
+
