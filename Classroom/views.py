@@ -156,3 +156,14 @@ def deleteTarea(request, pk, cursoid):
 
     return teacherCourse(request, cursoid)
 
+def deleteCurso(request, cursoid):
+    try:
+        deleteable = Curso.objects.get(pk=cursoid)
+        deleteable.delete()
+    except ValueError:
+        return teacherInit(request)
+    except ObjectDoesNotExist:
+        return teacherInit(request)
+
+    return teacherInit(request)
+

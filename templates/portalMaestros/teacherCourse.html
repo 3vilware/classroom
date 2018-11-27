@@ -67,6 +67,7 @@
             {% for curso in cursos %}
                 <div class="col-md-12 justify-content-center" style="border: solid cornflowerblue">
                     <span style="font-size: x-large;">{{ curso.nombre }} - <a href="{% url 'teacherCourse' curso.pk %}">Ver contenido</a></span>
+                    <a class="btn btn-outline-danger align-right" href="{% url 'teacherDeleteCourse' curso.pk %}" style="margin: 1%">Eliminar</a>
                 </div>
             {% endfor %}
         </div>

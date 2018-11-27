@@ -30,6 +30,7 @@ urlpatterns = [
     url(r'^teacherCourse/(?P<cursoid>.+?)', views.teacherCourse, name="teacherCourse"),
     url(r'^teacherEditTask/(?P<pk>.+?)/', views.updateTarea.as_view(), name="teacherEditTask"),
     url(r'^teacherDeleteTask/(?P<pk>.+?)/(?P<cursoid>.+?)', views.deleteTarea, name="teacherDeleteTask"),
+    url(r'^teacherDeleteCourse/(?P<cursoid>.+?)', views.deleteCurso, name="teacherDeleteCourse"),
     url(r'^createTeacherTask/', views.createTarea, name="createTeacherTask"),
     url(r'^createTeacherCourse/', views.createCurso, name="createTeacherCourse"),
     url(r'^successResponse/', views.successResponse, name="successResponse"),
