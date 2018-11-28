@@ -202,41 +202,41 @@
                     <div class="col-md-12" style="display: inline">
                         <h2 class="mb-5">Entregas de {{ name }}</h2>
                     </div>
-                    {% for enviado in calificables %}
-                        <div class="resume-item d-flex flex-column flex-md-row mb-5 col-md-4"
-                             style="border: solid burlywood" id="tareaItem">
-                            <div class="resume-content mr-auto">
-                                {% if not enviado.calificacion %}
-                                    <h4 class="mb-0" style="color: dodgerblue"> Pendiente Revisar </h4>
-                                {% else %}
-                                    <h4 class="mb-0" style="color: green"> Revisado </h4>
-                                {% endif %}
-                                <div class="subheading mb-3">Entregada: {{ enviado.entrega }}</div>
-                                <p>Actividad: {{ enviado.tareaCurso.curso.nombre }}</p>
+                    {% if calificables %}
+                        {% for enviado in calificables %}
+                            <div class="resume-item d-flex flex-column flex-md-row mb-5 col-md-4"
+                                 style="border: solid burlywood" id="tareaItem">
+                                <div class="resume-content mr-auto">
+                                    {% if not enviado.calificacion %}
+                                        <h4 class="mb-0" style="color: dodgerblue"> Pendiente Revisar </h4>
+                                    {% else %}
+                                        <h4 class="mb-0" style="color: green"> Revisado </h4>
+                                    {% endif %}
+                                    <div class="subheading mb-3">Entregada: {{ enviado.entrega }}</div>
+                                    <p>Actividad: {{ enviado.tareaCurso.curso.nombre }}</p>
+                                </div>
+                                <div>
+                                    {% if not enviado.calificacion %}
+                                        <span class="text-primary">Acciones: </span> <br>
+{#                                        <a href="{% url 'checkTask' enviado.pk %}" class="btn btn-success"#}
+{#                                           style="margin-top: 5%">#}
+                                            Calificar
+                                        </a>
+                                    {% else %}
+                                        <span class="text-primary">Acciones: </span> <br>
+                                        <button disabled class="btn btn-warning"
+                                                style="margin-top: 5%">
+                                            Calificado
+                                        </button>
+                                    {% endif %}
+                                </div>
                             </div>
-                            <div>
-                                {% if not enviado.calificacion %}
-                                    <span class="text-primary">Acciones: </span> <br>
-                                    <a href="{% url 'checkTask' enviado.pk %}" class="btn btn-success"
-                                       style="margin-top: 5%">
-                                        Calificar
-                                    </a>
-                                {% else %}
-                                    <span class="text-primary">Acciones: </span> <br>
-                                    <button disabled class="btn btn-warning"
-                                       style="margin-top: 5%">
-                                        Calificado
-                                    </button>
-                                {% endif %}
-                            </div>
-                        </div>
-                    {% endfor %}
+                        {% endfor %}
+                    {% endif %}
                 </div>
             </div>
         </div>
     </section>
-
-
 
 
 </div>
