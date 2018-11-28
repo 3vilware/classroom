@@ -30,7 +30,7 @@
     <a class="navbar-brand js-scroll-trigger" href="#page-top">
         <span class="d-block d-lg-none">Clarence Taylor</span>
         <span class="d-none d-lg-block">
-          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'img/avatar.jpg' %}" alt="">
+          <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'img/Logo.png' %}" alt="">
         </span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -47,6 +47,9 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#education">Calificaciones</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="{% url 'logout' %}">Salir</a>
             </li>
         </ul>
     </div>

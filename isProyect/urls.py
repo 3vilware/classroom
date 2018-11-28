@@ -24,10 +24,13 @@ from isProyect import settings
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^init/', views.init, name="init"),
+    url(r'^login/', views.login, name="login"),
+    url(r'^logout/', views.logout, name="logout"),
     url(r'^studentPortal/', views.studentInit, name="init"),
     url(r'^studentCourse/(?P<cursoid>.+?)', views.studentCourse, name="studentCourse"),
     url(r'^addCourseToStudent/(?P<codigo>.+?)/(?P<estudianteId>.+?)', views.addCourseToStudent, name="addCourseToStudent"),
     url(r'^uploadFile/', views.uploadTarea, name="uploadFile"),
+    url(r'^registerStudent/', views.studentRegister, name="registerStudent"),
 
     #Teacher
     url(r'^teacherInit/', views.teacherInit, name="teacherInit"),

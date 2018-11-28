@@ -1,10 +1,23 @@
 from django import forms
 from models import *
+from django.contrib.auth.models import User
+
+
+class UserForm(forms.ModelForm):
+    class Meta():
+        model = User
+        fields = ['username', 'password']
+
+        widgets = {
+            'username': forms.TextInput(attrs={'class': 'form-control col-md-4', 'type': 'text'}),
+            'password': forms.PasswordInput(attrs={'class': 'form-control col-md-4'}),
+        }
 
 class RegisterAlumnoForm(forms.ModelForm):
     class Meta():
         model = Alumno
-        fields = '__all__'
+        exclude = ['usuario']
+
 
 class TareaForm(forms.ModelForm):
     class Meta():

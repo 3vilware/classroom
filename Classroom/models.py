@@ -15,7 +15,7 @@ class Usuario(models.Model):
     tipo = models.IntegerField(default=1) # 1 alumno, 2 profesor, 3 admin
 
     def __unicode__(self):
-        return self.username.username
+        return self.username
 
 class Maestro(models.Model):
     usuario = models.ForeignKey(Usuario)

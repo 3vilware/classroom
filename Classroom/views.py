@@ -10,6 +10,11 @@ from forms import *
 from django.core.exceptions import ObjectDoesNotExist
 import json
 from django.utils import timezone
+from django.contrib.auth import authenticate
+from django.contrib.auth import logout as auth_logout
+from django.contrib.auth import login as auth_login
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import logout as auth_logout
 
 
 # Create your views here.
@@ -18,21 +23,78 @@ from django.utils import timezone
 def init(request):
     return render(request, 'index.html')
 
+
 def successResponse(request):
     return render(request, 'success.html')
 
 
-def studentInit(request):
+def studentRegister(request):
+    if request.method == 'POST':
+        pass
+        formRegistro = RegisterAlumnoForm(data=request.POST)
+        formUser = UserForm(data=request.POST)
+        context = {"form": formRegistro, "formUser": formUser}
+        print formUser.errors
+        print formRegistro.errors
+        if formRegistro.is_valid() and formUser.is_valid():
+            print formUser.cleaned_data
+            pwd = formUser.cleaned_data.get('password')
+            usuario = formUser.save()
+            usuario.set_password(pwd)
+            usuario.save()
+            usuarioInstance = Usuario(username=usuario, tipo=1)
+            usuarioInstance.save()
+            registro = formRegistro.save(commit=False)
+            registro.usuario = usuarioInstance
+            registro.save()
+            print "Saved"
 
+        return render(request, 'login.html', context)
+    else:
+        formRegistro = RegisterAlumnoForm()
+        formUser = UserForm()
+        context = {"form": formRegistro, "formUser": formUser}
+
+        return render(request, 'portalAlumno/registerStudent.html', context)
+
+
+
+def login(request):
+    if request.method == 'POST':
+        usuario = request.POST.get('usuario')
+        password = request.POST.get('pass')
+        try:
+            usuarioSistema = User.objects.get(username=usuario)
+        except ObjectDoesNotExist:
+            return HttpResponse("Error usuario")
+
+        user = authenticate(username=usuarioSistema.username, password=password)
+
+        if user:
+            auth_login(request, user)
+            return HttpResponseRedirect(reverse('init'))
+        else:
+            return HttpResponse("Credenciales incorrectas")
+
+    else:
+        return render(request, 'login.html', {})
+
+
+@login_required
+def studentInit(request):
     student =Alumno.objects.first()
+
     cursos = CursoAlumno.objects.filter(alumno=student.pk)
 
-    context = {"cursos":cursos}
+    context = {"cursos": cursos}
     return render(request, 'portalAlumno/index.html', context)
 
 
+@login_required
 def studentCourse(request, cursoid):
     student = Alumno.objects.first()
+    cursos = CursoAlumno.objects.filter(alumno=student.pk)
+
     cursos = CursoAlumno.objects.filter(alumno=student.pk)
 
     tasks = []
@@ -46,16 +108,16 @@ def studentCourse(request, cursoid):
         try:
             tareaAlumno = TareaAlumno.objects.get(alumno=student.pk, tareaCurso=t.pk)
             tareasAlumno.append(tareaAlumno)
-            print t.pk,"Tarea", tareaAlumno.tareaCurso.curso.nombre,tareaAlumno.estatus
+            print t.pk, "Tarea", tareaAlumno.tareaCurso.curso.nombre, tareaAlumno.estatus
         except ObjectDoesNotExist:
             pass
 
-    context = {"cursos": cursos, "tareas":tasks, "nombre":tasks[0].curso.nombre,
-               "alumnoTareas":tareasAlumno}
+    context = {"cursos": cursos, "tareas": tasks, "nombre": tasks[0].curso.nombre,
+               "alumnoTareas": tareasAlumno}
     return render(request, 'portalAlumno/studentCourse.html', context)
 
 
-def addCourseToStudent(request,codigo,estudianteId):
+def addCourseToStudent(request, codigo, estudianteId):
     print "Curso", codigo
     print "Estudiante", estudianteId
 
@@ -67,7 +129,7 @@ def addCourseToStudent(request,codigo,estudianteId):
         newCursoAlumno.save()
 
         tareasCurso = TareaCurso.objects.filter(curso=curso.pk)
-        print "DEBUG tareasCurso:",tareasCurso
+        print "DEBUG tareasCurso:", tareasCurso
         for tc in tareasCurso:
             print "Nuevo tc", tc.titulo
             newTareaAlumno = TareaAlumno(alumno=estudiante, tareaCurso=tc)
@@ -83,7 +145,7 @@ def addCourseToStudent(request,codigo,estudianteId):
         print "Error:", e
         pass
 
-    return HttpResponse([json.dumps({"estatus":"ok"})], content_type="application/json")
+    return HttpResponse([json.dumps({"estatus": "ok"})], content_type="application/json")
 
 
 def uploadTarea(request):
@@ -92,21 +154,24 @@ def uploadTarea(request):
         tid = int(request.POST.get('tareaId'))
 
         try:
-            student = Alumno.objects.first()#Alumno.objects.get(usuario=request.user)
+            userObj = User.objects.get(username=request.user)
+            usuario = Usuario.objects.get(username=userObj)
+            student = Alumno.objects.get(usuario=usuario.pk)# Alumno.objects.get(usuario=request.user)
             tareaGeneral = TareaCurso.objects.get(pk=tid)
-            print student.pk,"&", tareaGeneral.pk
+            print student.pk, "&", tareaGeneral.pk
             tareaAlumno = TareaAlumno.objects.get(alumno=student.pk, tareaCurso=tareaGeneral.pk)
             print tareaAlumno.archivo
             tareaAlumno.entrega = timezone.now()
             tareaAlumno.estatus = 2  # Entregado
             tareaAlumno.archivo = file
             tareaAlumno.save()
-            print("Tarea alumno:",tareaAlumno.pk)
+            print("Tarea alumno:", tareaAlumno.pk)
         except ObjectDoesNotExist, e:
             print "Error:", e
 
     return HttpResponseRedirect(reverse('init'))
 
+@login_required
 def teacherInit(request):
     teacher = Maestro.objects.first()
 
@@ -115,7 +180,7 @@ def teacherInit(request):
     context = {"cursos": cursos}
     return render(request, 'portalMaestros/index.html', context)
 
-
+@login_required
 def teacherCourse(request, cursoid):
     teacher = Maestro.objects.first()
     cursos = Curso.objects.filter(maestro=teacher.pk)
@@ -123,7 +188,7 @@ def teacherCourse(request, cursoid):
     tasks = TareaCurso.objects.filter(curso=cursoid)
     curso = Curso.objects.get(pk=cursoid)
 
-    context = {"cursos": cursos, "tareas":tasks, "name":curso.nombre}
+    context = {"cursos": cursos, "tareas": tasks, "name": curso.nombre}
     return render(request, 'portalMaestros/teacherCourse.html', context)
 
 
@@ -131,13 +196,11 @@ class updateTarea(UpdateView):
     model = TareaCurso
     form_class = TareaForm
     template_name = 'portalMaestros/edit.html'
-    #success_url = 'Success'
+
+    # success_url = 'Success'
 
     def get_success_url(self):
         return reverse('successResponse')
-
-
-
 
 def createTarea(request):
     if request.method == 'POST':
@@ -151,14 +214,15 @@ def createTarea(request):
             for ta in tareaParaAlumnos:
                 new = TareaAlumno(alumno=ta.alumno, tareaCurso=newTareaCurso, estatus=1)
                 new.save()
-            return teacherInit(request)
+            return HttpResponse("<h4>!Correcto¡</h4>")
     else:
         formTarea = TareaForm()
         student = Alumno.objects.first()
+
         cursos = CursoAlumno.objects.filter(alumno=student.pk)
 
         context = {"cursos": cursos, "form": formTarea}
-        return render(request,'portalMaestros/createTarea.html', context)
+        return render(request, 'portalMaestros/createTarea.html', context)
 
 
 def createCurso(request):
@@ -166,14 +230,18 @@ def createCurso(request):
         formCurso = CursoForm(data=request.POST)
         if formCurso.is_valid():
             formCurso.save()
-            return teacherInit(request)
+            print "Llego aqui"
+            return render(request, 'success.html', {})
+        else:
+            HttpResponse("Mal")
     else:
         formCurso = CursoForm()
         student = Alumno.objects.first()
+
         cursos = CursoAlumno.objects.filter(alumno=student.pk)
 
         context = {"cursos": cursos, "form": formCurso}
-        return render(request,'portalMaestros/createTarea.html', context)
+        return render(request, 'portalMaestros/createCurso.html', context)
 
 
 def deleteTarea(request, pk, cursoid):
@@ -181,6 +249,7 @@ def deleteTarea(request, pk, cursoid):
     deleteable.delete()
 
     return teacherCourse(request, cursoid)
+
 
 def deleteCurso(request, cursoid):
     try:
@@ -193,3 +262,8 @@ def deleteCurso(request, cursoid):
 
     return teacherInit(request)
 
+
+@login_required
+def logout(request):
+    auth_logout(request)
+    return render(request, 'login.html', {})
