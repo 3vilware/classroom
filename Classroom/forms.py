@@ -1,6 +1,11 @@
 from django import forms
 from models import *
 
+class RegisterAlumnoForm(forms.ModelForm):
+    class Meta():
+        model = Alumno
+        fields = '__all__'
+
 class TareaForm(forms.ModelForm):
     class Meta():
         model = TareaCurso
@@ -18,3 +23,4 @@ class CursoForm(forms.ModelForm):
 
         widgets = {
         }
+

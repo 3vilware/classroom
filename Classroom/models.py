@@ -29,7 +29,7 @@ class Maestro(models.Model):
 
 class Alumno(models.Model):
     codigo = models.CharField(max_length=20)
-    usuario = models.ForeignKey(User)
+    usuario = models.ForeignKey(Usuario)
     carrera = models.TextField() # Cambiar
     cicloIngreso = models.DateField()
     telefono = models.TextField()
