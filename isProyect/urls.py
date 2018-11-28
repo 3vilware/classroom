@@ -41,6 +41,7 @@ urlpatterns = [
     url(r'^createTeacherTask/', views.createTarea, name="createTeacherTask"),
     url(r'^createTeacherCourse/', views.createCurso, name="createTeacherCourse"),
     url(r'^successResponse/', views.successResponse, name="successResponse"),
+    url(r'^checkTask/(?P<taid>.\d)', views.checkTareaAlumno, name="checkTask"),
 
 ]
 

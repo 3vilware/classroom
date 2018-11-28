@@ -254,6 +254,20 @@ def createCurso(request):
         return render(request, 'portalMaestros/createCurso.html', context)
 
 
+def checkTareaAlumno(request, taid):
+    taid = int(taid)
+    print "TAID", taid
+    try:
+        ta = TareaAlumno.objects.get(pk=taid)
+        ta.calificacion = 1
+        ta.save()
+    except ObjectDoesNotExist, e:
+        print "Error", e
+
+    return render(request, 'portalMaestros/index.html', {})
+
+
+
 def deleteTarea(request, pk, cursoid):
     deleteable = TareaCurso.objects.get(pk=pk)
     deleteable.delete()

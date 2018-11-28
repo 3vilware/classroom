@@ -206,20 +206,28 @@
                         <div class="resume-item d-flex flex-column flex-md-row mb-5 col-md-4"
                              style="border: solid burlywood" id="tareaItem">
                             <div class="resume-content mr-auto">
-                                {% if enviado.estatus == 2 %}
-                                    <h4 class="mb-0" style="color: dodgerblue"> Pendiente </h4>
-                                {% elif enviado.estatus == 1 %}
-                                    <h4 class="mb-0" style="color: green"> Entregado </h4>
+                                {% if not enviado.calificacion %}
+                                    <h4 class="mb-0" style="color: dodgerblue"> Pendiente Revisar </h4>
+                                {% else %}
+                                    <h4 class="mb-0" style="color: green"> Revisado </h4>
                                 {% endif %}
                                 <div class="subheading mb-3">Entregada: {{ enviado.entrega }}</div>
                                 <p>Actividad: {{ enviado.tareaCurso.curso.nombre }}</p>
                             </div>
                             <div>
-                                <span class="text-primary">Acciones: </span> <br>
-                                <a href="" class="btn btn-success"
-                                   style="margin-top: 5%">
-                                    Calificar
-                                </a>
+                                {% if not enviado.calificacion %}
+                                    <span class="text-primary">Acciones: </span> <br>
+                                    <a href="{% url 'checkTask' enviado.pk %}" class="btn btn-success"
+                                       style="margin-top: 5%">
+                                        Calificar
+                                    </a>
+                                {% else %}
+                                    <span class="text-primary">Acciones: </span> <br>
+                                    <button disabled class="btn btn-warning"
+                                       style="margin-top: 5%">
+                                        Calificado
+                                    </button>
+                                {% endif %}
                             </div>
                         </div>
                     {% endfor %}
@@ -228,70 +236,8 @@
         </div>
     </section>
 
-    <hr class="m-0">
 
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
-        <div class="my-auto">
-            <h2 class="mb-5">Recursos</h2>
 
-            <div class="subheading mb-3">Leer acerca de lenguajes &amp; herramientas</div>
-            <ul class="list-inline dev-icons">
-                <li class="list-inline-item">
-                    <i class="fab fa-html5"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-css3-alt"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-js-square"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-angular"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-react"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-node-js"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-sass"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-less"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-wordpress"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-gulp"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-grunt"></i>
-                </li>
-                <li class="list-inline-item">
-                    <i class="fab fa-npm"></i>
-                </li>
-            </ul>
-        </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
-        <div class="my-auto">
-            <h2 class="mb-5">Perfil</h2>
-        </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
-        <div class="my-auto">
-            <h2 class="mb-5">En desarrollo...</h2>
-
-        </div>
-    </section>
 
 </div>
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ae6f161-a736-4a57-bb59-b8621ff1ea65" name="Default Changelist" comment="Estatus working. Working">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+    <list default="true" id="4ae6f161-a736-4a57-bb59-b8621ff1ea65" name="Default Changelist" comment="Estatus working. Calificando">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Classroom/views.py" afterPath="$PROJECT_DIR$/Classroom/views.py" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change beforePath="$PROJECT_DIR$/isProyect/urls.py" afterPath="$PROJECT_DIR$/isProyect/urls.py" />
       <change beforePath="$PROJECT_DIR$/templates/portalMaestros/teacherCourse.html" afterPath="$PROJECT_DIR$/templates/portalMaestros/teacherCourse.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,8 +54,8 @@
             <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/Classroom/models.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="473">
-                    <caret line="69" column="14" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="14" />
+                  <state relative-caret-position="495">
+                    <caret line="70" column="16" lean-forward="false" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="16" />
                     <folding />
                   </state>
                 </provider>
@@ -147,8 +147,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/isProyect/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="42" column="74" lean-forward="false" selection-start-line="42" selection-start-column="59" selection-end-line="42" selection-end-column="74" />
+            <state relative-caret-position="333">
+              <caret line="43" column="33" lean-forward="false" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
               <folding>
                 <element signature="e#643#675#0" expanded="true" />
               </folding>
@@ -159,8 +159,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Classroom/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="194" column="20" lean-forward="false" selection-start-line="194" selection-start-column="20" selection-end-line="194" selection-end-column="20" />
+            <state relative-caret-position="223">
+              <caret line="257" column="20" lean-forward="false" selection-start-line="257" selection-start-column="20" selection-end-line="257" selection-end-column="20" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
               </folding>
@@ -171,7 +171,7 @@
       <file leaf-file-name="registerStudent.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/portalAlumno/registerStudent.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="22">
+            <state relative-caret-position="-132">
               <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
               <folding />
             </state>
@@ -182,7 +182,7 @@
         <entry file="file://$PROJECT_DIR$/templates/login.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="316">
-              <caret line="40" column="11" lean-forward="true" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
+              <caret line="40" column="11" lean-forward="false" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -201,12 +201,13 @@
       <file leaf-file-name="teacherCourse.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/portalMaestros/teacherCourse.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="214" column="67" lean-forward="false" selection-start-line="214" selection-start-column="67" selection-end-line="214" selection-end-column="67" />
+            <state relative-caret-position="267">
+              <caret line="209" column="97" lean-forward="false" selection-start-line="209" selection-start-column="97" selection-end-line="209" selection-end-column="97" />
               <folding>
                 <element signature="n#style#0;n#h4#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h4#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -248,12 +249,12 @@
         <option value="$PROJECT_DIR$/templates/portalAlumno/registerStudent.html" />
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/isProyect/settings.py" />
-        <option value="$PROJECT_DIR$/isProyect/urls.py" />
         <option value="$PROJECT_DIR$/templates/portalAlumno/index.html" />
         <option value="$PROJECT_DIR$/templates/portalMaestros/index.html" />
         <option value="$USER_HOME$/Desktop/classroom/Classroom/models.py" />
         <option value="$PROJECT_DIR$/Classroom/models.py" />
         <option value="$PROJECT_DIR$/Classroom/views.py" />
+        <option value="$PROJECT_DIR$/isProyect/urls.py" />
         <option value="$PROJECT_DIR$/templates/portalMaestros/teacherCourse.html" />
       </list>
     </option>
@@ -447,7 +448,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543438427956</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Estatus working. Calificando">
+      <created>1543443668680</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1543443668680</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -471,7 +479,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2686916" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15735768" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32821637" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32814178" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24981739" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -495,7 +503,8 @@
     <MESSAGE value="Estatus working" />
     <MESSAGE value="Estatus working. Changed migration on Usuario" />
     <MESSAGE value="Estatus working. Working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Estatus working. Working" />
+    <MESSAGE value="Estatus working. Calificando" />
+    <option name="LAST_COMMIT_MESSAGE" value="Estatus working. Calificando" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -755,6 +764,7 @@
             <element signature="n#style#0;n#h4#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h4#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -998,16 +1008,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/isProyect/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="42" column="74" lean-forward="false" selection-start-line="42" selection-start-column="59" selection-end-line="42" selection-end-column="74" />
-          <folding>
-            <element signature="e#643#675#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/portalMaestros/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1408">
@@ -1058,13 +1058,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/81979257/5868448c-ba00-4b96-8787-c962e98089e9/main.Classroom_tareaalumno">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/81979257/5868448c-ba00-4b96-8787-c962e98089e9/main.Classroom_curso">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1083,45 +1076,63 @@
     <entry file="file://$PROJECT_DIR$/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
-          <caret line="40" column="11" lean-forward="true" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Classroom/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="194" column="20" lean-forward="false" selection-start-line="194" selection-start-column="20" selection-end-line="194" selection-end-column="20" />
-          <folding>
-            <element signature="e#24#63#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/portalAlumno/registerStudent.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <caret line="40" column="11" lean-forward="false" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Classroom/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="69" column="14" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="14" />
+        <state relative-caret-position="495">
+          <caret line="70" column="16" lean-forward="false" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Classroom/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="257" column="20" lean-forward="false" selection-start-line="257" selection-start-column="20" selection-end-line="257" selection-end-column="20" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/isProyect/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="43" column="33" lean-forward="false" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+          <folding>
+            <element signature="e#643#675#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/81979257/5868448c-ba00-4b96-8787-c962e98089e9/main.Classroom_tareaalumno">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/portalAlumno/registerStudent.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132">
+          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/portalMaestros/teacherCourse.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="214" column="67" lean-forward="false" selection-start-line="214" selection-start-column="67" selection-end-line="214" selection-end-column="67" />
+        <state relative-caret-position="267">
+          <caret line="209" column="97" lean-forward="false" selection-start-line="209" selection-start-column="97" selection-end-line="209" selection-end-column="97" />
           <folding>
             <element signature="n#style#0;n#h4#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h4#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
