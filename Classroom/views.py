@@ -154,9 +154,10 @@ def uploadTarea(request):
         tid = int(request.POST.get('tareaId'))
 
         try:
-            userObj = User.objects.get(username=request.user)
-            usuario = Usuario.objects.get(username=userObj)
-            student = Alumno.objects.get(usuario=usuario.pk)# Alumno.objects.get(usuario=request.user)
+            # userObj = User.objects.get(username=request.user)
+            # usuario = Usuario.objects.get(username=userObj)
+            # student = Alumno.objects.get(usuario=usuario.pk)# Alumno.objects.get(usuario=request.user)
+            student = Alumno.objects.first()
             tareaGeneral = TareaCurso.objects.get(pk=tid)
             print student.pk, "&", tareaGeneral.pk
             tareaAlumno = TareaAlumno.objects.get(alumno=student.pk, tareaCurso=tareaGeneral.pk)
@@ -188,7 +189,16 @@ def teacherCourse(request, cursoid):
     tasks = TareaCurso.objects.filter(curso=cursoid)
     curso = Curso.objects.get(pk=cursoid)
 
-    context = {"cursos": cursos, "tareas": tasks, "name": curso.nombre}
+    tareasAlumnos = []
+    for tc in tasks:
+        ta = TareaAlumno.objects.filter(tareaCurso=tc.pk)
+        for t in ta:
+            tareasAlumnos.append(t)
+
+
+
+    context = {"cursos": cursos, "tareas": tasks, "name": curso.nombre,
+               "calificables":tareasAlumnos}
     return render(request, 'portalMaestros/teacherCourse.html', context)
 
 

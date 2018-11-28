@@ -3,27 +3,27 @@
 <html lang="en">
 
 {% block header %}
-<head>
+    <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
 
-    <title>Portal Maestro</title>
+        <title>Portal Maestro</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+        <!-- Bootstrap core CSS -->
+        <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
-    <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
-    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+        <!-- Custom fonts for this template -->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+        <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="{% static 'css/resume.min.css' %}" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="{% static 'css/resume.min.css' %}" rel="stylesheet">
 
-</head>
+    </head>
 {% endblock %}
 
 <body id="page-top">
@@ -68,8 +68,10 @@
             </div>
             {% for curso in cursos %}
                 <div class="col-md-12 justify-content-center" style="border: solid cornflowerblue">
-                    <span style="font-size: x-large;">{{ curso.nombre }} - <a  class="btn btn-outline-secondary" href="{% url 'teacherCourse' curso.pk %}">Ver contenido</a></span>
-                    <a class="btn btn-outline-danger align-right" href="{% url 'teacherDeleteCourse' curso.pk %}" style="margin: 1%">Eliminar</a>
+                    <span style="font-size: x-large;">{{ curso.nombre }} - <a class="btn btn-outline-secondary"
+                                                                              href="{% url 'teacherCourse' curso.pk %}">Ver contenido</a></span>
+                    <a class="btn btn-outline-danger align-right" href="{% url 'teacherDeleteCourse' curso.pk %}"
+                       style="margin: 1%">Eliminar</a>
                 </div>
             {% endfor %}
         </div>
@@ -196,14 +198,31 @@
         <div class="my-auto">
             <h2 class="mb-5">Calificaciones</h2>
             <div class="resume-item d-flex flex-column flex-md-row mb-5">
-                <div class="resume-content mr-auto">
-                    <h3 class="mb-0">Proyecto IS</h3>
-                    <div class="subheading mb-3">Avance 1</div>
-                    <div>Bla bla</div>
-                    <p>95/100</p>
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">Octubre 2018 - <i style="color: green">Aprobado</i></span>
+                <div class="my-auto row">
+                    <div class="col-md-12" style="display: inline">
+                        <h2 class="mb-5">Entregas de {{ name }}</h2>
+                    </div>
+                    {% for enviado in calificables %}
+                        <div class="resume-item d-flex flex-column flex-md-row mb-5 col-md-4"
+                             style="border: solid burlywood" id="tareaItem">
+                            <div class="resume-content mr-auto">
+                                {% if enviado.estatus == 2 %}
+                                    <h4 class="mb-0" style="color: dodgerblue"> Pendiente </h4>
+                                {% elif enviado.estatus == 1 %}
+                                    <h4 class="mb-0" style="color: green"> Entregado </h4>
+                                {% endif %}
+                                <div class="subheading mb-3">Entregada: {{ enviado.entrega }}</div>
+                                <p>Actividad: {{ enviado.tareaCurso.curso.nombre }}</p>
+                            </div>
+                            <div>
+                                <span class="text-primary">Acciones: </span> <br>
+                                <a href="" class="btn btn-success"
+                                   style="margin-top: 5%">
+                                    Calificar
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
