@@ -17,6 +17,9 @@ from django.conf.urls import url
 from django.contrib import admin
 from Classroom import views
 from django.views.generic import TemplateView
+from django.conf.urls.static import static
+
+from isProyect import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -24,6 +27,7 @@ urlpatterns = [
     url(r'^studentPortal/', views.studentInit, name="init"),
     url(r'^studentCourse/(?P<cursoid>.+?)', views.studentCourse, name="studentCourse"),
     url(r'^addCourseToStudent/(?P<codigo>.+?)/(?P<estudianteId>.+?)', views.addCourseToStudent, name="addCourseToStudent"),
+    url(r'^uploadFile/', views.uploadTarea, name="uploadFile"),
 
     #Teacher
     url(r'^teacherInit/', views.teacherInit, name="teacherInit"),
@@ -36,3 +40,5 @@ urlpatterns = [
     url(r'^successResponse/', views.successResponse, name="successResponse"),
 
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

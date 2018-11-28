@@ -2,8 +2,13 @@
 from __future__ import unicode_literals
 from django.contrib.auth.models import User
 from django.db import models
+import os
+from django.core.files.storage import FileSystemStorage
+from isProyect import settings
 
 # Create your models here.
+fs = FileSystemStorage(location=os.path.join(settings.BASE_DIR,'media'))
+
 
 class Usuario(models.Model):
     username = models.OneToOneField(User)
@@ -67,5 +72,6 @@ class TareaAlumno(models.Model): # Entregas individuales por alumno
     entrega = models.DateTimeField(null=True, blank=True)
     comentario = models.TextField(default="Ninguno")
     estatus = models.IntegerField(default=1)  # 1 pendiente, 2 entregado, 3 atrasado
+    archivo = models.FileField(null=True, blank=True)
 
 

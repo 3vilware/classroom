@@ -9,6 +9,8 @@ from django.http import HttpResponseRedirect, HttpResponse
 from forms import *
 from django.core.exceptions import ObjectDoesNotExist
 import json
+from django.utils import timezone
+
 
 # Create your views here.
 
@@ -64,22 +66,46 @@ def addCourseToStudent(request,codigo,estudianteId):
         newCursoAlumno = CursoAlumno(curso=curso, alumno=estudiante)
         newCursoAlumno.save()
 
-        tareasCurso = TareaCurso.objects.get(curso=curso.pk)
-
+        tareasCurso = TareaCurso.objects.filter(curso=curso.pk)
+        print "DEBUG tareasCurso:",tareasCurso
         for tc in tareasCurso:
-            newTareaAlumno = TareaAlumno(alumno=estudiante.pk, tareasCurso=tc)
-            newCursoAlumno.save()
-    except ObjectDoesNotExist:
+            print "Nuevo tc", tc.titulo
+            newTareaAlumno = TareaAlumno(alumno=estudiante, tareaCurso=tc)
+            newTareaAlumno.save()
+            print "Success"
+    except ObjectDoesNotExist, e:
         pass
-        print "No hay no existe"
-    except ValueError:
-        print "No hay no existe"
+        print "Error:", e
+    except ValueError, e:
+        print "Error:", e
         pass
-
-
+    except TypeError, e:
+        print "Error:", e
+        pass
 
     return HttpResponse([json.dumps({"estatus":"ok"})], content_type="application/json")
 
+
+def uploadTarea(request):
+    if request.method == 'POST':
+        file = request.FILES['tareaFile']
+        tid = int(request.POST.get('tareaId'))
+
+        try:
+            student = Alumno.objects.first()#Alumno.objects.get(usuario=request.user)
+            tareaGeneral = TareaCurso.objects.get(pk=tid)
+            print student.pk,"&", tareaGeneral.pk
+            tareaAlumno = TareaAlumno.objects.get(alumno=student.pk, tareaCurso=tareaGeneral.pk)
+            print tareaAlumno.archivo
+            tareaAlumno.entrega = timezone.now()
+            tareaAlumno.estatus = 2  # Entregado
+            tareaAlumno.archivo = file
+            tareaAlumno.save()
+            print("Tarea alumno:",tareaAlumno.pk)
+        except ObjectDoesNotExist, e:
+            print "Error:", e
+
+    return HttpResponseRedirect(reverse('init'))
 
 def teacherInit(request):
     teacher = Maestro.objects.first()

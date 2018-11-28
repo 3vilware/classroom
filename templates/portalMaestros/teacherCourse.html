@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+{% block header %}
 <head>
 
     <meta charset="utf-8">
@@ -23,6 +24,7 @@
     <link href="{% static 'css/resume.min.css' %}" rel="stylesheet">
 
 </head>
+{% endblock %}
 
 <body id="page-top">
 
@@ -66,7 +68,7 @@
             </div>
             {% for curso in cursos %}
                 <div class="col-md-12 justify-content-center" style="border: solid cornflowerblue">
-                    <span style="font-size: x-large;">{{ curso.nombre }} - <a href="{% url 'teacherCourse' curso.pk %}">Ver contenido</a></span>
+                    <span style="font-size: x-large;">{{ curso.nombre }} - <a  class="btn btn-outline-secondary" href="{% url 'teacherCourse' curso.pk %}">Ver contenido</a></span>
                     <a class="btn btn-outline-danger align-right" href="{% url 'teacherDeleteCourse' curso.pk %}" style="margin: 1%">Eliminar</a>
                 </div>
             {% endfor %}
@@ -166,7 +168,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Nueva tarea</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Nuevo curso</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

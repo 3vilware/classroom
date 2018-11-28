@@ -58,7 +58,7 @@
             <h1 class="mb-0">Revisando:
                 <span class="text-primary">{{ nombre }} </span>
             </h1>
-        <button class="btn btn-success" onclick="addCourse()">INSCRIBIRME A UN CURSO</button>
+            <button class="btn btn-success" onclick="addCourse()">INSCRIBIRME A UN CURSO</button>
             {% for curso in cursos %}
                 <div class="col-md-6 justify-content-center">
                     {{ curso.curso.nombre }} - <a href="{% url 'studentCourse' curso.pk %}">Ver tareas</a>
@@ -88,18 +88,31 @@
                             {% if at.tareaCurso.curso.pk == tarea.curso.pk and at.tareaCurso.pk == tarea.pk %}
                                 {% if at.estatus == 1 %}
                                     <span>Estatus: <i style="color: dodgerblue">Pendiente</i></span>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#exampleModal">
+                                        Agregar envio
+                                    </button>
                                 {% elif at.estatus == 2 %}
                                     <span>Estatus: <i style="color: green; font-weight: bold">Entregado</i></span>
+                                    <br>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#exampleModal" disabled>
+                                        Agregar envio
+                                    </button>
                                 {% elif at.estatus == 3 %}
                                     <span>Estatus: <i style="color: red; font-weight: bold">Atrasado</i></span>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-success" data-toggle="modal"
+                                            data-target="#exampleModal">
+                                        Agregar envio
+                                    </button>
                                 {% endif %}
                             {% endif %}
                         {% endfor %}
                         <br>
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-                            Agregar envio
-                        </button>
+
                         <!-- Modal -->
                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                              aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -111,15 +124,18 @@
                                             <span aria-hidden="true">&times;</span>
                                         </button>
                                     </div>
-                                    <div class="modal-body">
-                                        ...
-                                        {{ forloop.counter0 }}
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar
-                                        </button>
-                                        <button type="button" class="btn btn-primary">Entregar</button>
-                                    </div>
+                                    <form action="{% url 'uploadFile' %}" method="post" enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        <div class="modal-body">
+                                            <input type="file" name="tareaFile" value="Seleccionar archivo">
+                                            <input type="text" name="tareaId" value="{{ tarea.pk }}" hidden>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar
+                                            </button>
+                                            <button type="submit" class="btn btn-primary">Entregar</button>
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -127,27 +143,6 @@
                 </div>
             {% endfor %}
 
-            {% comment %}<div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Estructura de datos</h3>
-              <div class="subheading mb-3">Archivos</div>
-              <p>Bla bla bla bla bla</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Noviembre 2018 - Atrasada</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Estructura de datos</h3>
-              <div class="subheading mb-3">Archivos</div>
-              <p>Bla bla bla bla bla</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">Noviembre 2018 - <i style="color: green">Entregado</i></span>
-            </div>
-          </div>{% endcomment %}
 
         </div>
 
@@ -253,15 +248,15 @@
 </body>
 
 <script>
-    function addCourse(){
+    function addCourse() {
         var codigo = prompt("Código del curso: ", "");
-        if (codigo == null || codigo == ""){
+        if (codigo == null || codigo == "") {
             txt = "No puedes enviar campos nulos";
             alert(txt);
         }
-        else{
+        else {
             var myId = 1;
-            url = "http://localhost:8000/addCourseToStudent/"+codigo+"/"+myId;
+            url = "http://localhost:8000/addCourseToStudent/" + codigo + "/" + myId;
             console.log(url);
 
             fetch(url)
